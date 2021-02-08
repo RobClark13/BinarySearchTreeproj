@@ -19,7 +19,10 @@ namespace BinaryTree
             myTree.AddNode(new Node(9));
             myTree.AddNode(new Node(56));
             myTree.AddNode(new Node(80));
-            myTree.Print();
+            myTree.Search(80);
+            myTree.Search(2);
+            Console.ReadLine();
+            
         }
     }
 }

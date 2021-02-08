@@ -57,14 +57,31 @@ namespace BinaryTree
                 if (value == focusNode.data)
                 {
                     Console.WriteLine("Item found in Tree");
+                    break;
                 }
                 else if (value > focusNode.data)
                 {
                     if (focusNode.rightNode == null)
                     {
-                        
+                        Console.WriteLine("Item not found in Tree");
+                        break;
                     }
-
+                    else
+                    {
+                        focusNode = focusNode.rightNode;
+                    }
+                }
+                else
+                {
+                    if(focusNode.leftNode == null)
+                    {
+                        Console.WriteLine("Item not found in Tree");
+                        break;
+                    }
+                    else
+                    {
+                        focusNode = focusNode.leftNode;
+                    }
                 }
             }
         }
